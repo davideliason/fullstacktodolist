@@ -11,12 +11,7 @@ class ToDoList extends React.Component {
 	}
 	render(){
 		const toDoListStyle = {
-			backgroundColor: "yellow",
-			width: 250,
-			border: "1px solid black",
-			marginLeft: 200,
-			marginTop: 50,
-			textAlign: "center"
+			marginLeft: 200
 		};
 
 		return(
@@ -24,6 +19,10 @@ class ToDoList extends React.Component {
 				  <div>
 					<h3>ToDoList</h3>
 					<h4>fullstack!</h4>
+					<form>
+						<input type="text" placeholder="to do task"></input>
+						<button type="submit">Add</button>
+					</form>
 				  </div>
 				  <div id="content">
 

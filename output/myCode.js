@@ -9786,12 +9786,7 @@ var ToDoList = function (_React$Component) {
 		key: 'render',
 		value: function render() {
 			var toDoListStyle = {
-				backgroundColor: "yellow",
-				width: 250,
-				border: "1px solid black",
-				marginLeft: 200,
-				marginTop: 50,
-				textAlign: "center"
+				marginLeft: 200
 			};
 
 			return _react2.default.createElement(
@@ -9811,11 +9806,17 @@ var ToDoList = function (_React$Component) {
 						'fullstack!'
 					),
 					_react2.default.createElement(
-						'p',
+						'form',
 						null,
-						this.state.items[0].text
+						_react2.default.createElement('input', { type: 'text', placeholder: 'to do task' }),
+						_react2.default.createElement(
+							'button',
+							{ type: 'submit' },
+							'Add'
+						)
 					)
-				)
+				),
+				_react2.default.createElement('div', { id: 'content' })
 			);
 		}
 	}]);
