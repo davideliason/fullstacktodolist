@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class HelloWorld extends React.Component {
+class ToDoList extends React.Component {
 	render(){
+
 		return(
 				<div>
-					<p>hello world</p>
+					<p>hi</p>
 				</div>
 			);
 	}
 };
 
-ReactDOM.render(<div><HelloWorld></HelloWorld></div>,document.querySelector('#container'));
+ReactDOM.render(<ToDoList />,document.querySelector('#container'));
