@@ -9767,40 +9767,65 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var HelloWorld = function (_React$Component) {
-	_inherits(HelloWorld, _React$Component);
+var ToDoList = function (_React$Component) {
+	_inherits(ToDoList, _React$Component);
 
-	function HelloWorld() {
-		_classCallCheck(this, HelloWorld);
+	function ToDoList(props) {
+		_classCallCheck(this, ToDoList);
 
-		return _possibleConstructorReturn(this, (HelloWorld.__proto__ || Object.getPrototypeOf(HelloWorld)).apply(this, arguments));
+		var _this = _possibleConstructorReturn(this, (ToDoList.__proto__ || Object.getPrototypeOf(ToDoList)).call(this, props));
+
+		_this.state = {
+			items: [{ key: "weds1609",
+				text: "code" }]
+		};
+		return _this;
 	}
 
-	_createClass(HelloWorld, [{
+	_createClass(ToDoList, [{
 		key: 'render',
 		value: function render() {
+			var toDoListStyle = {
+				backgroundColor: "yellow",
+				width: 250,
+				border: "1px solid black",
+				marginLeft: 200,
+				marginTop: 50,
+				textAlign: "center"
+			};
+
 			return _react2.default.createElement(
 				'div',
-				null,
+				{ style: toDoListStyle },
 				_react2.default.createElement(
-					'p',
+					'div',
 					null,
-					'hello world'
+					_react2.default.createElement(
+						'h3',
+						null,
+						'ToDoList'
+					),
+					_react2.default.createElement(
+						'h4',
+						null,
+						'fullstack!'
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						this.state.items[0].text
+					)
 				)
 			);
 		}
 	}]);
 
-	return HelloWorld;
+	return ToDoList;
 }(_react2.default.Component);
 
 ;
 
-_reactDom2.default.render(_react2.default.createElement(
-	'div',
-	null,
-	_react2.default.createElement(HelloWorld, null)
-), document.querySelector('#container'));
+_reactDom2.default.render(_react2.default.createElement(ToDoList, null), document.querySelector('#container'));
 
 /***/ }),
 /* 82 */
