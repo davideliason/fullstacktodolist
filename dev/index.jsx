@@ -24,7 +24,9 @@ class ToDoList extends React.Component {
 				  <div>
 					<h3>ToDoList</h3>
 					<h4>fullstack!</h4>
-					<p>{this.state.items[0].text}</p>
+				  </div>
+				  <div id="content">
+
 				  </div>
 				</div>
 			);
