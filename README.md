@@ -7,8 +7,18 @@ Javascript on front-end configuring webpack and babel for todo list
 **Anything else?**
 Yes, Building dev environment for react.js using babel, npm, webpack.
 
-###Dev:
+### To Use
+1. Clone the repo
 ````
-$ ./node_modules/.bin/webpack to spin up webpack to invoke Babel
+$ git clone https://github.com/davideliason/reactWebpackBabelToDoList
 ````
+2. change into the new directory
+````
+$ cd reactWebpackBabelToDoList
+````
+3. invoke webpack to let Babel do it's JS translating-thing:
+````
+$ ./node_modules/.bin/webpack
+````
+
 ![ReactWebpackBabelToDoList](./reactWebpackBabelToDoList.png)
