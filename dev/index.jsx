@@ -11,7 +11,8 @@ class ToDoList extends React.Component {
 	}
 	render(){
 		const toDoListStyle = {
-			marginLeft: 200
+			marginLeft: 200,
+			
 		};
 
 		return(

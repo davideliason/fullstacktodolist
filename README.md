@@ -5,3 +5,5 @@
 Javascript on front and backends: react.js, node.js, express, mongoDB. 
 *Anything else?* Yes, Building dev environment for react.js using babel, npm, webpack.
 
+###Dev:
+$./node_modules/.bin/webpack to spin up webpack to invoke Babel
