@@ -52,7 +52,7 @@ class ToDoList extends React.Component {
 				<div style={toDoListStyle}>
 				  <div>
 					<h3>ToDoList</h3>
-					<h4 style={moreSubtle}>fullstack!</h4>
+					<h4 style={moreSubtle}>woohoo!</h4>
 
 				    {/* invoke binded method */}
 					<form onSubmit={this.addItem}>
