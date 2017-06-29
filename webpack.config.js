@@ -5,7 +5,7 @@ var SRC 	= path.resolve(__dirname,"src");
 var PUBLIC	= path.resolve(__dirname,"public");
 
 var config = {
-	entry: SRC + "/index.jsx",
+	entry: SRC + "/index.js",
 	output: {
 		path: PUBLIC,
 		filename: "scripts.js"

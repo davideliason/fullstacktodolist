@@ -99,4 +99,4 @@ class ToDoListItem extends React.Component {
 	}
 };
 
-ReactDOM.render(<ToDoList />,document.querySelector('#container'));
+export default ToDoList
