@@ -26,6 +26,12 @@ class ToDoList extends React.Component {
 		this._inputElement.value="";
 
 	}
+
+	rollOutItems(array){
+		var results = array.map(function(item){
+			return <ToDoListItem
+		})
+	}
 	render(){
 		const toDoListStyle = {
 			marginLeft: 200,
@@ -43,7 +49,7 @@ class ToDoList extends React.Component {
 					</form>
 				  </div>
 				  <div id="content">
-				  	<ToDoListItem item={this.state.items[0].text} />
+				  	<ToDoListItem items={this.state.items} />
 				  </div>
 				</div>
 			);
@@ -60,7 +66,7 @@ class ToDoListItem extends React.Component {
 		} 
 		return(
 			 <div style={toDoListItemStyle}>
-			 	{this.props.item}
+			 	{this.props.items}
 			 </div>
 			);
 	}
