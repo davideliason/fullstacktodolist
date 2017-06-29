@@ -27,15 +27,16 @@ class ToDoList extends React.Component {
 
 	}
 
-	rollOutItems(array){
-		var results = array.map(function(item){
-			return <ToDoListItem
-		})
-	}
+	
 	render(){
 		const toDoListStyle = {
 			marginLeft: 200,
 			textAlign: "center"
+		};
+
+		const formInput = {
+			padding: 20,
+			borderRadius: 20
 		};
 
 		return(
@@ -43,9 +44,12 @@ class ToDoList extends React.Component {
 				  <div>
 					<h3>ToDoList</h3>
 					<h4>fullstack!</h4>
+
+				    {/* invoke binded method */}
 					<form onSubmit={this.addItem}>
-						<input ref={(a) => this._inputElement =a} placeholder="enter task"></input>
-						<button type="submit">Add</button>
+					    {/* use ref to capture this element for action */}
+						<input style={formInput} ref={(a) => this._inputElement =a} placeholder="enter task"></input>
+						<button style={formInput} type="submit">Add</button>
 					</form>
 				  </div>
 				  <div id="content">
@@ -64,10 +68,23 @@ class ToDoListItem extends React.Component {
 			border: "2px solid black",
 			borderRadius: 20
 		} 
+
+	    {/* pass items state array from parent  */}
+		var toDoItems = this.props.items;
+   
+        {/* create function to invoke using map */}
+		function listOutItem(item){
+				return <li key={item.key}>{item.text}</li>
+			}
+	    {/* create array populated with nested item components */}		
+		var itemList = toDoItems.map(listOutItem);
+
+        {/* spit out all those nested but ready components, they mirror state */ }
 		return(
-			 <div style={toDoListItemStyle}>
-			 	{this.props.items}
-			 </div>
+				<div style={toDoListItemStyle}>
+					{itemList}
+				</div>
+
 			);
 	}
 };

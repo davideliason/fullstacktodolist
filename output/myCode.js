@@ -9776,7 +9776,8 @@ var ToDoList = function (_React$Component) {
 		var _this = _possibleConstructorReturn(this, (ToDoList.__proto__ || Object.getPrototypeOf(ToDoList)).call(this, props));
 
 		_this.state = {
-			items: []
+			items: [{ key: "weds1609",
+				text: "code" }]
 		};
 
 		_this.addItem = _this.addItem.bind(_this);
@@ -9808,6 +9809,11 @@ var ToDoList = function (_React$Component) {
 				textAlign: "center"
 			};
 
+			var formInput = {
+				padding: 20,
+				borderRadius: 20
+			};
+
 			return _react2.default.createElement(
 				'div',
 				{ style: toDoListStyle },
@@ -9827,12 +9833,12 @@ var ToDoList = function (_React$Component) {
 					_react2.default.createElement(
 						'form',
 						{ onSubmit: this.addItem },
-						_react2.default.createElement('input', { ref: function ref(a) {
+						_react2.default.createElement('input', { style: formInput, ref: function ref(a) {
 								return _this2._inputElement = a;
 							}, placeholder: 'enter task' }),
 						_react2.default.createElement(
 							'button',
-							{ type: 'submit' },
+							{ style: formInput, type: 'submit' },
 							'Add'
 						)
 					)
@@ -9840,7 +9846,7 @@ var ToDoList = function (_React$Component) {
 				_react2.default.createElement(
 					'div',
 					{ id: 'content' },
-					_react2.default.createElement(ToDoListItem, { item: this.state.items[0].text })
+					_react2.default.createElement(ToDoListItem, { items: this.state.items })
 				)
 			);
 		}
@@ -9869,10 +9875,26 @@ var ToDoListItem = function (_React$Component2) {
 				border: "2px solid black",
 				borderRadius: 20
 			};
+
+			{/* pass items state array from parent  */}
+			var toDoItems = this.props.items;
+
+			{/* create function to invoke using map */}
+			function listOutItem(item) {
+				return _react2.default.createElement(
+					'li',
+					{ key: item.key },
+					item.text
+				);
+			}
+			{/* create array populated with nested item components */}
+			var itemList = toDoItems.map(listOutItem);
+
+			{/* spit out all those nested but ready components, they mirror state */}
 			return _react2.default.createElement(
 				'div',
 				{ style: toDoListItemStyle },
-				this.props.item
+				itemList
 			);
 		}
 	}]);
