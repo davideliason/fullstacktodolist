@@ -9810,12 +9810,17 @@ var ToDoList = function (_React$Component) {
 			};
 
 			var formInput = {
+				padding: 20
+			};
+
+			var button = {
 				padding: 20,
-				borderRadius: 20
+				backgroundColor: "green"
 			};
 
 			var moreSubtle = {
-				WebkitFilter: "opacity(20%)"
+				WebkitFilter: "opacity(20%)",
+				filter: "opacity(20%)"
 			};
 
 			return _react2.default.createElement(
@@ -9842,7 +9847,7 @@ var ToDoList = function (_React$Component) {
 							}, placeholder: 'enter task' }),
 						_react2.default.createElement(
 							'button',
-							{ style: formInput, type: 'submit' },
+							{ style: button, type: 'submit' },
 							'Add'
 						)
 					)

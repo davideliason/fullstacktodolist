@@ -35,9 +35,13 @@ class ToDoList extends React.Component {
 		};
 
 		const formInput = {
-			padding: 20,
-			borderRadius: 20
+			padding: 20
 		};
+
+		const button = {
+			padding: 20,
+			backgroundColor: "green"
+		}
 
 		const moreSubtle = {
 			WebkitFilter: "opacity(20%)",
@@ -54,7 +58,7 @@ class ToDoList extends React.Component {
 					<form onSubmit={this.addItem}>
 					    {/* use ref to capture this element for action */}
 						<input style={formInput} ref={(a) => this._inputElement =a} placeholder="enter task"></input>
-						<button style={formInput} type="submit">Add</button>
+						<button style={button} type="submit">Add</button>
 					</form>
 				  </div>
 				  <div id="content">
