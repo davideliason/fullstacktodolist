@@ -40,7 +40,8 @@ class ToDoList extends React.Component {
 		};
 
 		const moreSubtle = {
-			WebkitFilter: "opacity(20%)"
+			WebkitFilter: "opacity(20%)",
+			filter: "opacity(20%)"
 		};
 
 		return(
