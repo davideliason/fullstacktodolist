@@ -9786,8 +9786,8 @@ var ToDoList = function (_React$Component) {
 		key: 'render',
 		value: function render() {
 			var toDoListStyle = {
-				marginLeft: 200
-
+				marginLeft: 200,
+				textAlign: "center"
 			};
 
 			return _react2.default.createElement(
@@ -9845,11 +9845,13 @@ var ToDoListItem = function (_React$Component2) {
 		value: function render() {
 			var toDoListItemStyle = {
 				padding: 20,
-				backgroundColor: "pink"
+				backgroundColor: "pink",
+				border: "2px solid black",
+				borderRadius: 20
 			};
 			return _react2.default.createElement(
 				'div',
-				null,
+				{ style: toDoListItemStyle },
 				this.props.item
 			);
 		}
