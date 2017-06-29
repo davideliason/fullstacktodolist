@@ -9814,6 +9814,10 @@ var ToDoList = function (_React$Component) {
 				borderRadius: 20
 			};
 
+			var moreSubtle = {
+				WebkitFilter: "opacity(20%)"
+			};
+
 			return _react2.default.createElement(
 				'div',
 				{ style: toDoListStyle },
@@ -9827,7 +9831,7 @@ var ToDoList = function (_React$Component) {
 					),
 					_react2.default.createElement(
 						'h4',
-						null,
+						{ style: moreSubtle },
 						'fullstack!'
 					),
 					_react2.default.createElement(

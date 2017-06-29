@@ -39,11 +39,15 @@ class ToDoList extends React.Component {
 			borderRadius: 20
 		};
 
+		const moreSubtle = {
+			WebkitFilter: "opacity(20%)"
+		};
+
 		return(
 				<div style={toDoListStyle}>
 				  <div>
 					<h3>ToDoList</h3>
-					<h4>fullstack!</h4>
+					<h4 style={moreSubtle}>fullstack!</h4>
 
 				    {/* invoke binded method */}
 					<form onSubmit={this.addItem}>
