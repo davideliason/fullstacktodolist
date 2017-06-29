@@ -2,10 +2,10 @@
 ## June 28, 2017
 ### [David Eliason](http://www.deliason.com)
 **What**
-Javascript on front-end configuring webpack and babel for todo list
+To-Do list using **react.js** using Components, state, nesting,forms
 
 **Anything else?**
-Yes, Building dev environment for react.js using babel, npm, webpack.
+Yes, this app uses a dev environment for react.js using babel, npm, webpack.
 
 ### To Use
 1. Clone the repo
