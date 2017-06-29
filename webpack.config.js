@@ -1,18 +1,18 @@
 var webpack = require('webpack');
 var path 	= require('path');
 
-var DEV 	= path.resolve(__dirname,"dev");
-var OUTPUT	= path.resolve(__dirname,"output");
+var SRC 	= path.resolve(__dirname,"src");
+var PUBLIC	= path.resolve(__dirname,"public");
 
 var config = {
-	entry: DEV + "/index.jsx",
+	entry: SRC + "/index.jsx",
 	output: {
-		path: OUTPUT,
-		filename: "myCode.js"
+		path: PUBLIC,
+		filename: "scripts.js"
 	},
 	module: {
 		loaders: [{
-			include: DEV,
+			include: SRC,
 			loader: "babel-loader",
 		}]
 	}
