@@ -8,6 +8,23 @@ class ToDoList extends React.Component {
 			items: [{key:"weds1609",
 					 text: "code"}]
 		}
+
+		this.addItem = this.addItem.bind(this);
+	}
+
+	addItem(e){
+		e.preventDefault();
+
+		var itemsArray = this.state.items;
+		itemsArray.push({
+			key: Date.now(),
+			text: this._inputElement.value
+		});
+		this.setState({
+			items: itemsArray
+		});
+		this._inputElement.value="";
+
 	}
 	render(){
 		const toDoListStyle = {
@@ -20,13 +37,13 @@ class ToDoList extends React.Component {
 				  <div>
 					<h3>ToDoList</h3>
 					<h4>fullstack!</h4>
-					<form>
-						<input type="text" placeholder="to do task"></input>
+					<form onSubmit={this.addItem}>
+						<input ref={(a) => this._inputElement =a} placeholder="enter task"></input>
 						<button type="submit">Add</button>
 					</form>
 				  </div>
 				  <div id="content">
-				  	<ToDoListItem item="item" />
+				  	<ToDoListItem item={this.state.items[0].text} />
 				  </div>
 				</div>
 			);

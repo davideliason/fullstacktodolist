@@ -9776,15 +9776,33 @@ var ToDoList = function (_React$Component) {
 		var _this = _possibleConstructorReturn(this, (ToDoList.__proto__ || Object.getPrototypeOf(ToDoList)).call(this, props));
 
 		_this.state = {
-			items: [{ key: "weds1609",
-				text: "code" }]
+			items: []
 		};
+
+		_this.addItem = _this.addItem.bind(_this);
 		return _this;
 	}
 
 	_createClass(ToDoList, [{
+		key: 'addItem',
+		value: function addItem(e) {
+			e.preventDefault();
+
+			var itemsArray = this.state.items;
+			itemsArray.push({
+				key: Date.now(),
+				text: this._inputElement.value
+			});
+			this.setState({
+				items: itemsArray
+			});
+			this._inputElement.value = "";
+		}
+	}, {
 		key: 'render',
 		value: function render() {
+			var _this2 = this;
+
 			var toDoListStyle = {
 				marginLeft: 200,
 				textAlign: "center"
@@ -9808,8 +9826,10 @@ var ToDoList = function (_React$Component) {
 					),
 					_react2.default.createElement(
 						'form',
-						null,
-						_react2.default.createElement('input', { type: 'text', placeholder: 'to do task' }),
+						{ onSubmit: this.addItem },
+						_react2.default.createElement('input', { ref: function ref(a) {
+								return _this2._inputElement = a;
+							}, placeholder: 'enter task' }),
 						_react2.default.createElement(
 							'button',
 							{ type: 'submit' },
@@ -9820,7 +9840,7 @@ var ToDoList = function (_React$Component) {
 				_react2.default.createElement(
 					'div',
 					{ id: 'content' },
-					_react2.default.createElement(ToDoListItem, { item: 'item' })
+					_react2.default.createElement(ToDoListItem, { item: this.state.items[0].text })
 				)
 			);
 		}
