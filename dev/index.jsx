@@ -66,7 +66,8 @@ class ToDoListItem extends React.Component {
 			padding: 20,
 			backgroundColor: "pink",
 			border: "2px solid black",
-			borderRadius: 20
+			borderRadius: 20,
+			listStyleType: "none"
 		} 
 
 	    {/* pass items state array from parent  */}
@@ -81,9 +82,9 @@ class ToDoListItem extends React.Component {
 
         {/* spit out all those nested but ready components, they mirror state */ }
 		return(
-				<div style={toDoListItemStyle}>
+				<ul style={toDoListItemStyle}>
 					{itemList}
-				</div>
+				</ul>
 
 			);
 	}

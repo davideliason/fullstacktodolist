@@ -9873,7 +9873,8 @@ var ToDoListItem = function (_React$Component2) {
 				padding: 20,
 				backgroundColor: "pink",
 				border: "2px solid black",
-				borderRadius: 20
+				borderRadius: 20,
+				listStyleType: "none"
 			};
 
 			{/* pass items state array from parent  */}
@@ -9892,7 +9893,7 @@ var ToDoListItem = function (_React$Component2) {
 
 			{/* spit out all those nested but ready components, they mirror state */}
 			return _react2.default.createElement(
-				'div',
+				'ul',
 				{ style: toDoListItemStyle },
 				itemList
 			);
