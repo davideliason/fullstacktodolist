@@ -9817,12 +9817,45 @@ var ToDoList = function (_React$Component) {
 						)
 					)
 				),
-				_react2.default.createElement('div', { id: 'content' })
+				_react2.default.createElement(
+					'div',
+					{ id: 'content' },
+					_react2.default.createElement(ToDoListItem, { item: 'item' })
+				)
 			);
 		}
 	}]);
 
 	return ToDoList;
+}(_react2.default.Component);
+
+;
+
+var ToDoListItem = function (_React$Component2) {
+	_inherits(ToDoListItem, _React$Component2);
+
+	function ToDoListItem() {
+		_classCallCheck(this, ToDoListItem);
+
+		return _possibleConstructorReturn(this, (ToDoListItem.__proto__ || Object.getPrototypeOf(ToDoListItem)).apply(this, arguments));
+	}
+
+	_createClass(ToDoListItem, [{
+		key: 'render',
+		value: function render() {
+			var toDoListItemStyle = {
+				padding: 20,
+				backgroundColor: "pink"
+			};
+			return _react2.default.createElement(
+				'div',
+				null,
+				this.props.item
+			);
+		}
+	}]);
+
+	return ToDoListItem;
 }(_react2.default.Component);
 
 ;

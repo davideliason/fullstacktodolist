@@ -12,7 +12,7 @@ class ToDoList extends React.Component {
 	render(){
 		const toDoListStyle = {
 			marginLeft: 200,
-			
+
 		};
 
 		return(
@@ -26,9 +26,23 @@ class ToDoList extends React.Component {
 					</form>
 				  </div>
 				  <div id="content">
-
+				  	<ToDoListItem item="item" />
 				  </div>
 				</div>
+			);
+	}
+};
+
+class ToDoListItem extends React.Component {
+	render(){
+		var toDoListItemStyle = {
+			padding: 20,
+			backgroundColor: "pink"
+		} 
+		return(
+			 <div>
+			 	{this.props.item}
+			 </div>
 			);
 	}
 };
