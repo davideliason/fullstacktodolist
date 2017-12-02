@@ -1,6 +1,6 @@
 # react-webpack-babel-ToDoList
 ## June 28, 2017
-### [David Eliason](http://www.deliason.com)
+### [David Eliason](http://www.davethemaker.com)
 **What**
 To-Do list using **react.js** using Components, state, nesting, forms
 
