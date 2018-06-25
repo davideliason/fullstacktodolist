@@ -28,6 +28,8 @@ $ npm install
 $ ./node_modules/.bin/webpack
 ````
 
+5. Open the root html file in your browser
+
 ![ReactWebpackBabelToDoList](./reactWebpackBabelToDoList.png)
 
 [Return to Portfolio](https://davideliason.github.io/)
