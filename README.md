@@ -18,7 +18,12 @@ $ git clone https://github.com/davideliason/reactWebpackBabelToDoList
 ````
 $ cd reactWebpackBabelToDoList
 ````
-3. invoke webpack to let Babel do it's JS translating-thing:
+3. Install the dependencies
+````
+$ npm install
+````
+
+4. invoke webpack to let Babel do it's JS translating-thing:
 ````
 $ ./node_modules/.bin/webpack
 ````
